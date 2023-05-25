@@ -109,7 +109,7 @@ while running:
 
     if game_over_timer:
         text_surface = my_font.render('Game Over', False, (255,255,255))
-        screen.blit(text_surface, (SCREEN_WIDTH/2,SCREEN_HEIGHT/2))
+        screen.blit(text_surface, (SCREEN_WIDTH/2-100,SCREEN_HEIGHT/2-50))
         game_over_timer -= dt
         if game_over_timer <= 20:
             running = False

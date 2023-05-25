@@ -42,7 +42,7 @@ class Player(pg.sprite.Sprite):
     def collides_with(self, other_obj):
         distance = math.sqrt((self.rect.center[0] - other_obj.rect.center[0]) ** 2 + 
                              (self.rect.center[1] - other_obj.rect.center[1]) ** 2)
-        return distance < 45
+        return distance < other_obj.size
     
     def update(self,screen):
         self.rect.center += self.inertia

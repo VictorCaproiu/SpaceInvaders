@@ -34,7 +34,7 @@ class Laser(pg.sprite.Sprite):
     def collides_with(self, other_obj):
         distance = math.sqrt((self.rect.center[0] - other_obj.rect.center[0]) ** 2 + 
                              (self.rect.center[1] - other_obj.rect.center[1]) ** 2)
-        return distance < 30
+        return distance < other_obj.size/2
     
     def update(self):
         self.rect.center += self.inertia
